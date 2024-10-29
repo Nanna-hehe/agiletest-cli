@@ -39,7 +39,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type behave --project-key TC \
+          test-execution import --framework-type behave --project-key AUT \
           /reports/behave-report.json
 
   cucumber-test-and-upload:
@@ -75,7 +75,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type cucumber --project-key TC \
+          test-execution import --framework-type cucumber --project-key AUT \
           /reports/cucumber-report.json
 
   junit-test-and-upload:
@@ -111,7 +111,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type junit --project-key TC \
+          test-execution import --framework-type junit --project-key AUT \
           /reports/junit-report.xml
 
   robot-test-and-upload:
@@ -147,7 +147,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type robot --project-key TC \
+          test-execution import --framework-type robot --project-key AUT \
           /reports/robot-report.xml
 
   nunit-test-and-upload:
@@ -184,7 +184,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type nunit --project-key TC \
+          test-execution import --framework-type nunit --project-key AUT \
           /reports/nunit-report.xml
 
   xunit-test-and-upload:
@@ -221,7 +221,7 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type xunit --project-key TC \
+          test-execution import --framework-type xunit --project-key AUT \
           /reports/xunit-report.xml
 
   testng-test-and-upload:
@@ -260,5 +260,5 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
-          test-execution import --framework-type testng --project-key TC \
+          test-execution import --framework-type testng --project-key AUT \
           /reports/testng-results.xml
