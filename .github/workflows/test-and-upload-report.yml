@@ -3,6 +3,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      PROJECT_KEY:
+        description: The key of project
+        type: string
+        required: true # require project key
+      TEST_EXECUTION_KEY:
+        description: The key of test execution
+        type: string
+        required: false # optional test execution key
   schedule:
     - cron: "0 0 * * *"
 jobs:
