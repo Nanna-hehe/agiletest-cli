@@ -49,7 +49,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type behave --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/behave-report.json
 
   cucumber-test-and-upload:
@@ -86,7 +86,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type cucumber --project-key AUT \ 
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/cucumber-report.json
 
   junit-test-and-upload:
@@ -123,7 +123,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type junit --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/junit-report.xml
 
   robot-test-and-upload:
@@ -160,7 +160,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type robot --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/robot-report.xml
 
   nunit-test-and-upload:
@@ -198,7 +198,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type nunit --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/nunit-report.xml
 
   xunit-test-and-upload:
@@ -236,7 +236,7 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type xunit --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/xunit-report.xml
 
   testng-test-and-upload:
@@ -276,5 +276,5 @@ jobs:
           -v ${{ github.workspace }}/reports:/reports \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type testng --project-key AUT \
-          --test-execution-key AUT-6062
+          --test-execution-key AUT-6062 \
           /reports/testng-results.xml
